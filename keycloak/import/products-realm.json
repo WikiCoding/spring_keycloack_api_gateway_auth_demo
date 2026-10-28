@@ -17,6 +17,9 @@
   "users": [
     {
       "username": "developer",
+      "firstName": "Local",
+      "lastName": "Developer",
+      "email": "developer@example.test",
       "enabled": true,
       "emailVerified": true,
       "credentials": [
