@@ -19,6 +19,7 @@
       "username": "developer",
       "enabled": true,
       "emailVerified": true,
+      "requiredActions": [],
       "credentials": [
         {
           "type": "password",
