@@ -5,7 +5,7 @@ A reactive products application. The React UI signs in through the API gateway, 
 ## Run locally
 
 ```powershell
-docker compose up -d
+docker compose up -d --build
 cd products; mvn spring-boot:run
 cd ..\api_gateway; mvn spring-boot:run
 cd ..\products-ui; npm start
@@ -22,4 +22,6 @@ Invoke-RestMethod -Method Post http://localhost:8080/api/v1/products -Headers $h
 Invoke-RestMethod "http://localhost:8080/api/v1/products?page=0&size=10" -Headers $headers
 ```
 
-See [architecture](docs/architecture.md) and [user stories](docs/user-stories.md).
+Eureka dashboard: [localhost:8761](http://localhost:8761). Product requests use Redis-backed per-user limits (10 requests/second, burst 20).
+
+See [gateway setup and scaling](api_gateway/README.md), [architecture](docs/architecture.md), and [user stories](docs/user-stories.md).
